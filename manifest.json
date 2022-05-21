@@ -1,0 +1,29 @@
+{
+  "name": "MoodleHack",
+  "description": "Помощь студентам в решении тестов на Moodle",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "./background/background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://moodle.phystech.edu/*",
+    "http://moodle.phystech.edu/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content/*"],
+      "matches": [
+        "https://moodle.phystech.edu/*",
+        "http://moodle.phystech.edu/*"
+      ]
+    }
+  ]
+}
