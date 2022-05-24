@@ -69,4 +69,5 @@ function isMultiAttempt(test_type){
 }
 
 function makeNewBadAttempt(){
+
 }

@@ -1,4 +1,5 @@
 const map = new Map
+console.log(chrome.storage)
 
 export function getAnswersLocally(test_title){
     return map.has(test_title) ? map.get(test_title) : null

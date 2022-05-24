@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e2d53b9-8287-4c23-b2f4-f4d9971fd88f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/attempt/setAnswersOnAttemptPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/storage_controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/icon/icon16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/icon/icon32.png" afterDir="false" />
+    <list default="true" id="4e2d53b9-8287-4c23-b2f4-f4d9971fd88f" name="Changes" comment="Функционал логгера на странице теста с выбором вариантов поиска ответов.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/background/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/background/background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/attempt/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/attempt/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/review/getAnswers.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/review/getAnswersFromReviewPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/review/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/review/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/dynamic_injection.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/dynamic_injection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/storage_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/storage_controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/view/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/view/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/view/view_getBadAttemptURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/attempt/Map_qClass_to_Func.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/view/view_getTestName.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/getTestTitle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/view/view_startNewAttempt.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/view/logger.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,8 +102,16 @@
       <option name="presentableId" value="Default" />
       <updated>1653060020802</updated>
       <workItem from="1653060025990" duration="1134000" />
-      <workItem from="1653061245007" duration="44948000" />
+      <workItem from="1653061245007" duration="48599000" />
     </task>
+    <task id="LOCAL-00001" summary="Функционал логгера на странице теста с выбором вариантов поиска ответов.">
+      <created>1653413210562</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653413210562</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +127,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Функционал логгера на странице теста с выбором вариантов поиска ответов." />
+    <option name="LAST_COMMIT_MESSAGE" value="Функционал логгера на странице теста с выбором вариантов поиска ответов." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
