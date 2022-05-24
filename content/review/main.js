@@ -10,5 +10,6 @@ questions.forEach((question, idx)=>{
     question.appendChild(innerText)
 })
 
-saveAnswersLocally(test_title, answers)
+await saveAnswersLocally(test_title, answers)
+
 document.querySelector("ul.breadcrumb li.lastli a").click()

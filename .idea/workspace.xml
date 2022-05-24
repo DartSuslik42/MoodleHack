@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e2d53b9-8287-4c23-b2f4-f4d9971fd88f" name="Changes" comment="Функционал логгера на странице теста с выбором вариантов поиска ответов.">
+    <list default="true" id="4e2d53b9-8287-4c23-b2f4-f4d9971fd88f" name="Changes" comment="correct dynamic injection content scripts. Chrome scope no longer missed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/dynamic_injection.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/dynamic_injection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/background/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/review/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/review/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/storage_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/storage_controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/view/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/view/main.js" afterDir="false" />
     </list>
@@ -102,7 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653060020802</updated>
       <workItem from="1653060025990" duration="1134000" />
-      <workItem from="1653061245007" duration="48599000" />
+      <workItem from="1653061245007" duration="53460000" />
     </task>
     <task id="LOCAL-00001" summary="Функционал логгера на странице теста с выбором вариантов поиска ответов.">
       <created>1653413210562</created>
@@ -111,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653413210562</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="correct dynamic injection content scripts. Chrome scope no longer missed">
+      <created>1653419503955</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653419503964</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,7 +138,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Функционал логгера на странице теста с выбором вариантов поиска ответов." />
-    <option name="LAST_COMMIT_MESSAGE" value="Функционал логгера на странице теста с выбором вариантов поиска ответов." />
+    <MESSAGE value="correct dynamic injection content scripts. Chrome scope no longer missed" />
+    <option name="LAST_COMMIT_MESSAGE" value="correct dynamic injection content scripts. Chrome scope no longer missed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

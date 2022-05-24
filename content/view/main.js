@@ -14,7 +14,7 @@ findAccessToAnswers();
 async function findAccessToAnswers() {
     logger.make_log("Ищу ответы в локальном хранилище")
 
-    if (hasAnswersLocally(test_title)) {
+    if (await hasAnswersLocally(test_title)) {
         logger.make_log("Нашёл ответы в локальном хранилище")
         return
     }

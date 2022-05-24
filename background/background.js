@@ -1,9 +1,7 @@
 import {script_builder} from "../content/dynamic_injection.js";
+import {mapName} from "../content/storage_controller.js";
 
-chrome.runtime.onInstalled.addListener(() => {
-    chrome.storage.local.set({"TestAnswersMap" : new Map()})
-});
-
+chrome.storage.local.set({[mapName] : [...(new Map)]})
 
 const tabName_to_src = new Map()
 tabName_to_src.set("summary", "content/summary/main.js")
