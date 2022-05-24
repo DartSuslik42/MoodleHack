@@ -1,7 +1,13 @@
 import {script_builder} from "../content/dynamic_injection.js";
-import {mapName} from "../content/storage_controller.js";
+import {mapName} from "../content/map_name.js";
 
-chrome.storage.local.set({[mapName] : [...(new Map)]})
+chrome.runtime.onInstalled.addListener(()=>{
+    chrome.storage.local.set({
+        [mapName] : [...(new Map)],
+        started_test_title : "",
+    })
+    console.log("background.js script installed")
+})
 
 const tabName_to_src = new Map()
 tabName_to_src.set("summary", "content/summary/main.js")
@@ -21,6 +27,8 @@ function scriptInjection(tab){
             func : script_builder,
             args : [tabName_to_src.get(URL_LastRoot)],
             target: {allFrames: false, tabId: tab.id}
+        }, ()=>{
+            console.log(`${tabName_to_src.get(URL_LastRoot)} injected in ${tab.url}`)
         })
     }
 }

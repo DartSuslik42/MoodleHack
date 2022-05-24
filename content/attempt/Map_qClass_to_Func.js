@@ -1,7 +1,14 @@
 
 const setQAns = new Map()
 setQAns.set('ddwtos', (div, ans)=>{
-    const drags = [...div.querySelector('div.drags').children]
+    const p = [...div.querySelector('div.drags').children]
+    const drags = p.reduce((newArr,el,idx,arr)=>{
+        if(idx === arr.findIndex($=>$.innerText === el.innerText)){
+            newArr.push(el)
+        }
+        return newArr
+    },[])
+
     const inputs = [...div.querySelectorAll('input.placeinput')]
     inputs.forEach((i, idx) => i.value = 1 + drags.findIndex(el=>{
         return el.innerText.replace(/\s+/g, '').includes(ans[idx].replace(/\s+/g, ''))
@@ -26,7 +33,19 @@ setQAns.set('truefalse',  (div, ans)=>{
 setQAns.set('multianswer', (div, ansArr)=>{
     const a = [...div.querySelectorAll(".subquestion")]
     a.forEach((el, idx)=>{
-        el.lastChild.value = ansArr[idx]
+        // Нужно вписать слова в пустые поля
+        const input = el.querySelector("input.form-control")
+        if(input){
+            input.value = ansArr[idx]
+            return
+        }
+        // Нужно выбрать 1 вариант из выпадающего меню
+        const select = el.querySelector("select")
+        if(select) {
+            select.value = [...select.children].find(el => el.innerText === ansArr[idx]).value
+            return;
+        }
+        console.error(`Непредвиденное поведение: ${div.id},${div.classList[1]}`)
     })
 })
 setQAns.set('match', (div, ansArr)=>{

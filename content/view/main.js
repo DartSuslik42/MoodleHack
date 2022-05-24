@@ -9,6 +9,12 @@ div.style.flexDirection = "column"
 const logger = createLogger();
 div.appendChild(logger)
 
+const start_new_attempt_btn = document.querySelector("div.quizstartbuttondiv input")
+start_new_attempt_btn.value = "Пройти тест САМОСТОЯТЕЛЬНО"
+start_new_attempt_btn.addEventListener("click",()=>{
+    chrome.storage.local.set({"started_test_title" : test_title})
+})
+
 findAccessToAnswers();
 
 async function findAccessToAnswers() {
@@ -16,6 +22,7 @@ async function findAccessToAnswers() {
 
     if (await hasAnswersLocally(test_title)) {
         logger.make_log("Нашёл ответы в локальном хранилище")
+        start_new_attempt_btn.value = "Пройти тест АВТОМАТИЧЕСКИ"
         return
     }
 

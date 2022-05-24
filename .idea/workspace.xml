@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e2d53b9-8287-4c23-b2f4-f4d9971fd88f" name="Changes" comment="correct dynamic injection content scripts. Chrome scope no longer missed">
+    <list default="true" id="4e2d53b9-8287-4c23-b2f4-f4d9971fd88f" name="Changes" comment="Теперь ответы сохраняются в локальном хранилище Chrome.storage">
+      <change afterPath="$PROJECT_DIR$/content/map_name.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/background/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/background/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/attempt/Map_qClass_to_Func.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/attempt/Map_qClass_to_Func.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/attempt/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/attempt/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/attempt/setAnswersOnAttemptPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/attempt/setAnswersOnAttemptPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/getTestTitle.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/getTestTitle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/review/Map_qClass_to_Func.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/review/Map_qClass_to_Func.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/review/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/review/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/storage_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/storage_controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/summary/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/summary/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/view/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/view/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +75,7 @@
       <recent name="C:\Users\marin\Desktop\Projects\MoodleHack\content\attempt\" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="C:\Users\marin\Desktop\Projects\MoodleHack\content\map_name.js" />
       <recent name="C:\Users\marin\Desktop\Projects\MoodleHack\content\view\logger.js" />
     </key>
   </component>
@@ -103,7 +111,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653060020802</updated>
       <workItem from="1653060025990" duration="1134000" />
-      <workItem from="1653061245007" duration="53460000" />
+      <workItem from="1653061245007" duration="64229000" />
     </task>
     <task id="LOCAL-00001" summary="Функционал логгера на странице теста с выбором вариантов поиска ответов.">
       <created>1653413210562</created>
@@ -119,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653419503964</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Теперь ответы сохраняются в локальном хранилище Chrome.storage">
+      <created>1653424280040</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653424280040</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,7 +154,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Функционал логгера на странице теста с выбором вариантов поиска ответов." />
     <MESSAGE value="correct dynamic injection content scripts. Chrome scope no longer missed" />
-    <option name="LAST_COMMIT_MESSAGE" value="correct dynamic injection content scripts. Chrome scope no longer missed" />
+    <MESSAGE value="Теперь ответы сохраняются в локальном хранилище Chrome.storage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Теперь ответы сохраняются в локальном хранилище Chrome.storage" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

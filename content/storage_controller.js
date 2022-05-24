@@ -1,7 +1,9 @@
-export const mapName = "TestAnswersMap"
+import {mapName} from "./map_name.js";
+
 const map_promise = chrome.storage.local.get(mapName).then(result=>{
-    const map = new Map(result[mapName])
-    return map
+    const $ = new Map(result[mapName])
+    console.log($)
+    return $
 })
 
 export async function getAnswersLocally(test_title){

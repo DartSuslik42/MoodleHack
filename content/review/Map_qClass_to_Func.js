@@ -12,8 +12,9 @@ getQAns.set('oumultiresponse', (div)=>{
 })
 getQAns.set('multichoice', getQAns.get('oumultiresponse'))
 getQAns.set('ddwtos', (div)=>{
-    return [...div.querySelector('.rightanswer').innerText.matchAll(REGEX_WORD + '(?=\])')]
-        .map(el=>el[0].trim())
+    // Возвращает массив строк, находящихся между [...]
+    return [...div.querySelector('.rightanswer').innerText.matchAll(/\[([\s\S]+?)]/g)]
+        .map(el=>el[1].trim())
 })
 getQAns.set('gapselect', getQAns.get('ddwtos'))
 getQAns.set('ddmatch', (div)=>{

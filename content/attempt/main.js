@@ -1,9 +1,9 @@
-import {setAnswersOnAttemptPage} from "./setAnswersOnAttemptPage"
-import {test_title} from "../getTestTitle.js";
-import {getAnswersLocally} from "../storage_controller";
+import {setAnswersOnAttemptPage} from "./setAnswersOnAttemptPage.js"
+import {getAnswersLocally} from "../storage_controller.js";
 
 const questions = [...document.querySelectorAll(".que")]
-const answers = getAnswersLocally(test_title)
+const test_title = await chrome.storage.local.get("started_test_title").then((el)=>el["started_test_title"])
+const answers = await getAnswersLocally(test_title)
 
 const answersInjectedCorrectly = setAnswersOnAttemptPage(questions, answers)
 if(answersInjectedCorrectly){
