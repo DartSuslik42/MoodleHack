@@ -1,17 +1,15 @@
 import {script_builder} from "../content/dynamic_injection.js";
 
-// let color = '#3aa757';
-//
-// chrome.runtime.onInstalled.addListener(() => {
-//     chrome.storage.sync.set({ color });
-//     console.log('Default background color set to %cgreen', `color: ${color}`);
-// });
+chrome.runtime.onInstalled.addListener(() => {
+    chrome.storage.local.set({"TestAnswersMap" : new Map()})
+});
+
 
 const tabName_to_src = new Map()
 tabName_to_src.set("summary", "content/summary/main.js")
 tabName_to_src.set("review", "content/review/main.js")
-// tabName_to_src.set("view",)
-// tabName_to_src.set("attempt",)
+tabName_to_src.set("view", "content/view/main.js")
+tabName_to_src.set("attempt", "content/attempt/main.js")
 
 function isMoodleQuizURL(url){
     return /^https:\/\/moodle\.phystech\.edu\/mod\/quiz\//.test(url)
@@ -29,14 +27,10 @@ function scriptInjection(tab){
     }
 }
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    const isPageLoaded = changeInfo?.status !== 'complete'
+    const isPageLoaded = changeInfo?.status === 'complete'
     if(isPageLoaded){
         if(!isMoodleQuizURL(tab.url)) return
 
         scriptInjection(tab)
     }
 })
-//  "action": {
-//    "default_popup": "./popup/popup.html"
-//  },
-//  "options_page": "./options/options.html"
