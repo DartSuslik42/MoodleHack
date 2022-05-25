@@ -3,6 +3,7 @@ const mark = Number(document.querySelector("table.quizreviewsummary tbody")
     .lastChild
     .textContent
     .match(/[0-9]+(?=,)/)[0])
+
 if(mark === 0) {
 
     const getAnswersFromReviewPage = await import("./getAnswersFromReviewPage.js")
@@ -20,8 +21,7 @@ if(mark === 0) {
     await storage_controller.saveAnswersLocally(getTestTitle.test_title, answers)
 
     document.querySelector("ul.breadcrumb li.lastli a").click()
-}
-if(mark !== 10){
+}else if(mark !== 10){
     // функционал сбора ошибок.
     console.error("Отказ в работе модуля сбора ошибок выполнения")
 }
