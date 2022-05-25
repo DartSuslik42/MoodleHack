@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e2d53b9-8287-4c23-b2f4-f4d9971fd88f" name="Changes" comment="Правки в логгировании.">
-      <change beforePath="$PROJECT_DIR$/content/review/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/review/main.js" afterDir="false" />
+    <list default="true" id="4e2d53b9-8287-4c23-b2f4-f4d9971fd88f" name="Changes" comment="Правки в логгировании">
+      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653060020802</updated>
       <workItem from="1653060025990" duration="1134000" />
-      <workItem from="1653061245007" duration="70678000" />
+      <workItem from="1653061245007" duration="70823000" />
     </task>
     <task id="LOCAL-00001" summary="Функционал логгера на странице теста с выбором вариантов поиска ответов.">
       <created>1653413210562</created>
@@ -144,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653441320512</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Правки в логгировании">
+      <created>1653441988260</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653441988260</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +174,8 @@
     <MESSAGE value="Теперь ответы сохраняются в локальном хранилище Chrome.storage" />
     <MESSAGE value="Корректировка архитектуры" />
     <MESSAGE value="Правки в логгировании." />
-    <option name="LAST_COMMIT_MESSAGE" value="Правки в логгировании." />
+    <MESSAGE value="Правки в логгировании" />
+    <option name="LAST_COMMIT_MESSAGE" value="Правки в логгировании" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

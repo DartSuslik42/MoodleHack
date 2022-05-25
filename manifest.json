@@ -3,6 +3,10 @@
   "description": "Помощь студентам в решении тестов на Moodle",
   "version": "1.0",
   "manifest_version": 3,
+  "icons": {
+    "16": "./images/icon/icon16.png",
+    "32": "./images/icon/icon32.png"
+  },
   "background": {
     "service_worker": "./background/background.js",
     "type": "module"
