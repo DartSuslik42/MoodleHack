@@ -1,24 +1,49 @@
-
 const setQAns = new Map()
+setQAns.set('multichoice', (div, ans)=>{
+    const form = div.querySelector('div.answer')
+    if(form){
+        const variants = [...form.children].map(v=>{
+            return {
+                select : function (){
+                    if(this.isSelected) return
+                    this.isSelected = true
+                    v.querySelector('input').click()
+                },
+                isSelected : false,
+                innerText : v.innerText,
+            }
+        })
+        ans.forEach(answer=>
+            variants.find(variant=>
+                variant.innerText.includes(answer)
+            ).select()
+        )
+        return
+    }
+    console.error(`Непредвиденное поведение: ${div.id},${div.classList[1]}`)
+})
 setQAns.set('ddwtos', (div, ans)=>{
-    const p = [...div.querySelector('div.drags').children]
-    const drags = p.reduce((newArr,el,idx,arr)=>{
-        if(idx === arr.findIndex($=>$.innerText === el.innerText)){
-            newArr.push(el)
-        }
-        return newArr
-    },[])
+    try{
+        const p = [...div.querySelector('div.drags').children]
+        const drags = p.reduce((newArr,el,idx,arr)=>{
+            if(idx === arr.findIndex($=>$.innerText === el.innerText)){
+                newArr.push(el)
+            }
+            return newArr
+        },[])
 
-    const inputs = [...div.querySelectorAll('input.placeinput')]
-    inputs.forEach((i, idx) => i.value = 1 + drags.findIndex(el=>{
-        return el.innerText.replace(/\s+/g, '').includes(ans[idx].replace(/\s+/g, ''))
-    }))
+        const inputs = [...div.querySelectorAll('input.placeinput')]
+        inputs.forEach((i, idx) => i.value = 1 + drags.findIndex(el=>{
+            return el.innerText.replace(/\s+/g, '') === ans[idx].replace(/\s+/g, '')
+        }))
+    }catch (e){
+        console.error(e)
+    }
 })
 setQAns.set('ddmatch', (div, ans)=>{
     const qArr = [...div.querySelector(".ablock tbody").children]
-    const qAnsArr = [...div.querySelector(".ablock ul.matchorigin").children]
-    console.log([qArr, qAnsArr])
-    qArr.forEach((q, idx)=>{
+    // const qAnsArr = [...div.querySelector(".ablock ul.matchorigin").children]
+    qArr.forEach(q=>{
         const userAnswer = ans.find(el=>q.querySelector(".text").innerText.includes(el.question))
         // const pageAnswer = qAnsArr.find(el=>el.innerText.includes(userAnswer.answer))
         const selectValue = [...q.querySelector("select").children].find(el=>el.innerText.includes(userAnswer.answer))

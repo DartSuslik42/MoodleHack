@@ -33,7 +33,7 @@ function scriptInjection(tab){
     }
 }
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    const isPageLoaded = changeInfo?.status === 'complete'
+    const isPageLoaded = changeInfo?.status === 'loading'//'complete'
     if(isPageLoaded){
         if(!isMoodleQuizURL(tab.url)) return
 

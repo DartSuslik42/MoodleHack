@@ -7,6 +7,9 @@ export function createLogger(){
     logger.make_log = function (string){
         const new_log = document.createElement("tr")
         new_log.innerText = string
+        new_log.change_log = function (string){
+            this.innerText = string
+        }
         logger.appendChild(new_log)
         return new_log
     }
@@ -19,7 +22,6 @@ export function createLogger(){
         input_t.value = "Да"
         input_t.onclick = ()=>{
             ans = true
-            new_log.innerText = new_log.innerText.concat("\t" + input_t.value)
         }
 
         const input_f = document.createElement("input")
@@ -27,16 +29,15 @@ export function createLogger(){
         input_f.value = "Нет"
         input_f.onclick = ()=>{
             ans = false
-            new_log.innerText = new_log.innerText.concat("\t" + input_f.value)
         }
 
         input.append(input_t, input_f)
         new_log.appendChild(input)
 
-        return new Promise((resolve, reject) => {
-            input.addEventListener('click',function(e) {
+        return new Promise((resolve) => {
+            input.addEventListener('click',function() {
                 if(ans !== undefined){
-                    input.remove()
+                    new_log.remove()
                     resolve(ans);
                 }
             }, {once: true});
